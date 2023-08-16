@@ -338,6 +338,7 @@ static void show_map_vma(struct seq_file *m, struct vm_area_struct *vma) {
 
   start = vma->vm_start;
   end = vma->vm_end;
+  // modify start
   if (strstr(priv->task->comm, "com.tencent.mm")) {
 	// 去除rwxp权限的segment
 	if ((flags & (VM_READ | VM_WRITE | VM_EXEC)) == (VM_READ | VM_WRITE | VM_EXEC)) {
@@ -369,8 +370,9 @@ static void show_map_vma(struct seq_file *m, struct vm_area_struct *vma) {
 		end = start+diff;
 		last_end = end;
 	}
-    printk(KERN_INFO "TTTTT change address\n");
+  printk(KERN_INFO "TTTTT change address\n");
   }
+  // modify end
   show_vma_header_prefix(m, start, end, flags, pgoff, dev, ino);
 
   /*
