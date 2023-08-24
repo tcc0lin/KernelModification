@@ -7,5 +7,7 @@
     - fs/stat.c->SYSCALL_DEFINE4(newfstatat)
 - statfs属性修改
     - fs/statfs.c->SYSCALL_DEFINE2(statfs)
-- 系统信息修改
+- uname信息修改
     - kernel/sys.c->SYSCALL_DEFINE1(newuname)
+- getdents某些文件隐藏（针对ext4类型的目录）
+    - fs/ext4/dir.c(ext4_readdir)
