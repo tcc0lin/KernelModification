@@ -1,6 +1,7 @@
 # KernelModification
 
-配合改机策略所做的内核层函数修改
+配合改机策略所做的内核层函数修改等
+
 - maps展示内容特征修改
     - fs/proc/task_mmu.c->show_map_vma()
 - stat属性修改
