@@ -12,3 +12,5 @@
     - kernel/sys.c->SYSCALL_DEFINE1(newuname)
 - getdents某些文件隐藏（针对ext4类型的目录）
     - fs/ext4/dir.c(ext4_readdir)
+- version文件修改
+    - init/version.c
